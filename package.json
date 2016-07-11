@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "Portfolio web for Pablo Alonso",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Pablo Alonso",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

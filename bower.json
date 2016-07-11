@@ -1,0 +1,18 @@
+{
+  "name": "portfolio",
+  "description": "Portfolio web for Pablo Alonso",
+  "main": "",
+  "authors": [
+    "Pablo Alonso"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
