@@ -3,31 +3,58 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    pump = require('pump'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
 
 // Directories
-var src = 'template/src/assets/web',
+var src = 'template/src/assets/web/',
     cssDirectory = 'template/src/assets/web/css',
-    cssMinifyDirectory = 'template/dist/assets/web/css',
-    preLessDirectory = 'template/src/assets/web/less';
+    preLessDirectory = 'template/src/assets/web/less',
     lessDirectory = 'template/src/assets/web/css';
 
 var minsrc = 'template/dist/assets/web/';
 
+// TASKS 
 
 // Default minify-css
 gulp.task('minify-css', function(){
-    return gulp.src(src + '/*.css')
+    return gulp.src(src + 'css/*.css')
         .pipe(cleanCSS())
-        .pipe(gulp.dest(cssMinifyDirectory));
+        .pipe(gulp.dest(minsrc + 'css'));
 });
 
+// Compile the less files 
 gulp.task("less", function() {
-    gulp.src(src + "/less/*.less")
+    gulp.src(src + "less/*.less")
         .pipe(less())
-        .pipe(gulp.dest(src + '/css'));
+        .pipe(gulp.dest(src + 'css'));
 });
+ 
+// Concat all the js files
+gulp.task('concat-js', function() {
+  return gulp.src(src + 'js/*.js')
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest(src + 'js/'));
+});
+
+// Minify js 
+gulp.task('minify-js', function (cb) {
+  pump([
+        gulp.src(src + 'js/script.js'),
+        uglify(),
+        gulp.dest(minsrc + 'js/')
+    ],
+    cb
+  );
+});
+
+// Finish proyect
+// Improve
+gulp.task('finish', ['concat-js', 'minify-js', 'less', 'minify-css'], function() {
+	console.log("Finished");
+})
 
 // Default starts the server
 gulp.task('default', function(){
