@@ -63,10 +63,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Default text style */
 body {
   font-family: 'Roboto';
 }
-/* Default text style */
 a {
   list-style: none;
   text-decoration: none;
@@ -201,7 +201,7 @@ section p,
 .social-icon {
   margin-right: 40px;
 }
-.social:first-child {
+.social:last-child {
   margin-left: 40px;
 }
 /* //FOOTER */
