@@ -1,3 +1,4 @@
+@import "color-guide.less";
 @import "animations.less";
 
 *{
@@ -32,7 +33,7 @@ nav{
 	padding: 20px 15px;
 	position: fixed;
 	width: 100%;
-	background-color: #FFF;
+	background-color: @base-bg-color;
 }
 nav>a{
 	padding-left: 20px;
@@ -54,7 +55,7 @@ nav>ul{
 .test{
 	width: 100vw;
 	height: 100vh;
-	background-color: #FFF;
+	background-color: @base-bg-color;
 }
 .full-center{
     /* whatever width or height */
@@ -98,7 +99,7 @@ section p,
 	cursor: pointer;
 	color: #5a5a5a;
 	&:hover{
-		color: #000;
+		color: @base-color;
 	}
 }
 .arrow-down{
@@ -131,11 +132,11 @@ section p,
 /* FOOTER */
 .footer{
 	padding: 100px 0;
-	background-color: #000;
+	background-color: @base-color;
 
 	&__header{
 		text-align: center;
-		color: #FFF;
+		color: @base-bg-color;
 		font-weight: 100;
 		font-style: italic;
 		letter-spacing: 1px;
