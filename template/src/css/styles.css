@@ -127,7 +127,8 @@ nav > ul {
 }
 section h1,
 section p,
-.project-section h2 {
+.project-section h2,
+.project-section h4 {
   text-align: center;
   font-weight: 100;
   font-style: italic;
@@ -171,14 +172,16 @@ section p,
 }
 .project-section .header-text {
   font-style: normal;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .img-container {
+  padding-top: 100px;
   width: 90%;
   margin: 0 auto;
 }
 .img-container__img {
   width: 100%;
+  box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 /* FOOTER */
@@ -195,17 +198,41 @@ section p,
   margin-bottom: 25px;
 }
 .social {
-  width: 346px;
+  max-width: 266px;
   margin: 0 auto;
 }
 .social-icon {
   margin-right: 40px;
 }
-.social:last-child {
-  margin-left: 40px;
+.social-icon:last-child {
+  margin-right: 0;
 }
-/* //FOOTER */
-svg path:hover,
-svg path:focus {
+.social .logo-twitter svg path:hover,
+.social .logo-twitter svg path:focus {
+  fill: #00ACED;
+}
+.social .logo-instagram:hover svg path,
+.social .logo-instagram:focus svg path {
   fill: #a77d63;
 }
+.social .logo-github:hover svg path,
+.social .logo-github:focus svg path {
+  fill: #FFF;
+}
+.social .logo-medium:hover .shape-1,
+.social .logo-medium:focus .shape-1 {
+  fill: #2DFB82;
+}
+.social .logo-medium:hover .shape-2,
+.social .logo-medium:focus .shape-2 {
+  fill: #10DF65;
+}
+.social .logo-medium:hover .shape-3,
+.social .logo-medium:focus .shape-3 {
+  fill: #15C05C;
+}
+.social .logo-medium:hover .shape-4,
+.social .logo-medium:focus .shape-4 {
+  fill: #01A161;
+}
+/* //FOOTER */

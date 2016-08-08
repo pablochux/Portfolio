@@ -72,7 +72,8 @@ nav>ul{
 }
 section h1,
 section p,
-.project-section h2{
+.project-section h2,
+.project-section h4{
 	text-align: center;
 	font-weight: 100;
 	font-style: italic;
@@ -118,14 +119,17 @@ section p,
 	padding-top: 62px;
  	& .header-text{
 		font-style: normal;
-		padding: 20px 0;
+		padding: 10px 0;
 	}
 }
 .img-container{
+	padding-top: 100px;
 	width: 90%;
 	margin: 0 auto;
+
 	&__img{
 		width: 100%;
+		box-shadow: 20px 20px 40px 0px rgba(0,0,0,0.50);
 		cursor: pointer;
 	}
 }
@@ -145,19 +149,54 @@ section p,
 
 }
 .social{
-	width: 346px;
+	max-width: 266px;
 	margin: 0 auto;
 
 	&-icon{
 		margin-right: 40px;
+
+		&:last-child{
+			margin-right: 0;
+		}
 	}
-	&:last-child{
-		margin-left: 40px;
+
+	& .logo-twitter svg path{
+		&:hover,
+		&:focus{
+			fill: #00ACED;
+		}
+	}
+	& .logo-instagram:hover,
+	& .logo-instagram:focus{
+		& svg path{
+			fill: #a77d63;
+		}
+	}
+	& .logo-github:hover,
+	& .logo-github:focus{
+		& svg path{
+			fill: #FFF;
+		}
+	}
+
+	& .logo-medium{
+		&:hover,
+		&:focus{
+			.shape{
+				&-1{
+					fill: #2DFB82;
+				}
+				&-2{
+					fill: #10DF65;
+				}
+				&-3{
+					fill: #15C05C;
+				}
+				&-4{
+					fill:#01A161;
+				}
+			}
+		}
 	}
 }
 /* //FOOTER */
-// Instagram color
-svg path:hover,
-svg path:focus{
-	fill: #a77d63;
-}
