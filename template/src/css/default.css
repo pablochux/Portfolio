@@ -1,0 +1,17 @@
+.center {
+  text-align: center;
+}
+.margin-center {
+  margin: 0 auto;
+}
+/* Default text style */
+body {
+  font-family: 'Roboto';
+  background-color: #FFF;
+}
+a,
+.default-header {
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: 1px;
+}
