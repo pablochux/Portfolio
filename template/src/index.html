@@ -9,29 +9,29 @@
 	</head>
 	<body>
 		<header class="header">
-			<nav>
-				<a href="#home" class="header_link">Pablo Alonso</a>
-				<ul>
-					<li><a data-scroll href="#home" title="Home" class="header_link">Home</a></li>
-					<li><a data-scroll href="#projects" title="Projects" class="header_link">Projects</a></li>
-					<li><a data-scroll href="#footer" title="About" class="header_link">About</a></li>
+			<nav class="nav">
+				<a href="#home" data-scroll class="nav__link">Pablo Alonso</a>
+				<ul class="nav_right">
+					<li class="nav__item"><a data-scroll href="#home" title="Home" class="nav__link">Home</a></li>
+					<li class="nav__item"><a data-scroll href="#projects" title="Projects" class="nav__link">Projects</a></li>
+					<li class="nav__item"><a data-scroll href="#footer" title="About" class="nav__link">About</a></li>
 				</ul>
 			</nav>
 		</header>
 		<section class="home" id="home">
-			<div class="full-center">
-				<h1 class="home-header">Pablo Alonso</h1>
-				<p class="home-sub-header">Web developer / designer based on Madrid</p>
+			<div class="home-center">
+				<h1 class="home-center__header">Pablo Alonso</h1>
+				<p class="home-center__sub-header">Web developer / designer based on Madrid</p>
 			</div>
 			<div class="arrow">
-				<a data-scroll href="#projects" title="Projects">Projects
-					<svg class="arrow-down" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/></g></svg>
+				<a data-scroll href="#projects" title="Projects" class="arrow__link">Projects
+					<svg class="arrow__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/></g></svg>
 				</a>
 			</div>
 		</section>
 		<section class="project-section" id="projects">
-			<h2 class="project-section-header">Tobias Van Schneider Tribute Page</h2>
-			<h4 class="project-section-sub-header">
+			<h2 class="project-section__header">Tobias Van Schneider Tribute Page</h2>
+			<h4 class="project-section__sub-header">
 				<a href="https://github.com/pablochux/Tribute-Page" title="Github Respositoty">Github Repository</a>
 				<a href="https://pablochux.github.io/Tribute-Page/" title="Demo"> - Demo</a>
 			</h4>
@@ -45,7 +45,7 @@
 			<h3 class="footer__header">Find me on:</h3>
 			<div class="social">
 				<ul>
-					<li class="social-icon social-icon_twitter">
+					<li class="social__icon social__icon_twitter">
 						<a href="https://twitter.com/_pabloalonso" target="_blank" title="Twitter">
 							<svg width="33px" height="26px" viewBox="39 17 33 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							    <g id="black-twitter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(39.926036, 17.000000)">
@@ -56,7 +56,7 @@
 							</svg>
 						</a>
 					</li>
-					<li class="social-icon social-icon_instagram">
+					<li class="social__icon social__icon_instagram">
 						<a href="https://www.instagram.com/_pabloalonso/" target="_blank" title="Instagram">
 							<svg width="32px" height="32px" viewBox="112 14 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							    <g id="social-1_logo-instagram" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(112.000000, 14.000000)">
@@ -67,7 +67,7 @@
 							</svg>
 						</a>
 					</li>
-					<li class="social-icon social-icon_github">
+					<li class="social__icon social__icon_github">
 						<a href="https://github.com/pablochux" target="_blank" title="Github">
 							<svg width="33px" height="32px" viewBox="184 14 33 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							    <g id="social-1_logo-github" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(184.073964, 14.000000)">
@@ -78,7 +78,7 @@
 							</svg>
 							</a>
 					</li>
-					<li class="social-icon social-icon_medium">
+					<li class="social__icon social__icon_medium">
 						<a href="https://medium.com/@_pabloalonso" target="_blank" title="Medium">
 							<svg width="36px" height="30px" viewBox="257 15 36 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							    <defs></defs>

@@ -4,9 +4,8 @@
 .margin-center {
   margin: 0 auto;
 }
-/* Default text style */
 body {
-  font-family: 'Roboto';
+  font-family: Roboto;
   background-color: #FFF;
 }
 a,

@@ -1,6 +1,6 @@
-//------------------------------
-// Imports
-//------------------------------
+//----------//
+// Styles
+//----------//
 //------------------------------
 // Imports
 //------------------------------
@@ -18,19 +18,18 @@
 	width: 100%;
 	background-color: @main-bg-color;
 
-	&_link{
-		color: #414141;
-		font-size: 18px;
+	& .nav{
+		&_right{
+			float: right;
+		}
+		&__item:not(:last-child){
+			margin-right: 30px;
+		}
+		&__link{
+			color: #414141;
+			font-size: 18px;
+		}
 	}
-	// Fix
-	& ul{
-		float: right;
-		display: inline-block;
-	}
-	& li:not(:last-child){
-		margin-right: 30px;
-	}
-	// Fix
 }
 //------------------------------
 // Home
@@ -40,28 +39,29 @@
 	height: 100vh;
 	background-color: @main-bg-color;
 
-	&-header{
-		font-size: 48px;
-		.default-header;
-		.center;
-	}
-	&-sub-header{
-		margin-top: 30px;
-		font-size: 24px;
-		.default-header;
-	}
-}
-.full-center{
-	max-width: 480px;
-    height: 120px;
+	&-center{
+		max-width: 480px;
+	    height: 120px;
 
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+	    position: absolute;
+	    top:0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
 
-    margin: auto;
+	    margin: auto;
+
+		&__header{
+			font-size: 48px;
+			.default-header;
+			.center;
+		}
+		&__sub-header{
+			margin-top: 30px;
+			font-size: 24px;
+			.default-header;
+		}
+	}
 }
 .arrow{
 	position: absolute;
@@ -70,7 +70,7 @@
     left: 50%;
     cursor: pointer;
 
-	&-down{
+	&__svg{
 		fill: #5a5a5a;
 		padding-top: 10px;
 		display: block;
@@ -81,14 +81,15 @@
 		-moz-animation: bounce 2s infinite;
 		-o-animation: bounce 2s infinite;
 	}
-	& a{
+	// It's down because it has to have more specifity
+	&__link{
 		cursor: pointer;
 		color: #5a5a5a;
 
 		&:hover{
 			color: @main-text-color;
 
-			& .arrow-down{
+			& svg{
 				fill: @main-text-color;
 			}
 		}
@@ -102,12 +103,12 @@
 	padding-top: 62px;
 	.center;
 
- 	&-header{
+ 	&__header{
 		font-style: normal;
 		padding: 10px 0;
 		.default-header;
 	}
-	&-sub-header{
+	&__sub-header{
 		.default-header;
 	}
 }
@@ -140,7 +141,7 @@
 	max-width: 266px;
 	.margin-center;
 
-	&-icon{
+	&__icon{
 		margin-right: 40px;
 
 		&:last-child{
@@ -186,4 +187,3 @@
 		}
 	}
 }
-/* //FOOTER */

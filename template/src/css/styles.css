@@ -16,9 +16,8 @@ ul > li {
 .margin-center {
   margin: 0 auto;
 }
-/* Default text style */
 body {
-  font-family: 'Roboto';
+  font-family: Roboto;
   background-color: #FFF;
 }
 a,
@@ -94,37 +93,22 @@ a,
   width: 100%;
   background-color: #FFF;
 }
-.header_link {
+.header .nav_right {
+  float: right;
+}
+.header .nav__item:not(:last-child) {
+  margin-right: 30px;
+}
+.header .nav__link {
   color: #414141;
   font-size: 18px;
-}
-.header ul {
-  float: right;
-  display: inline-block;
-}
-.header li:not(:last-child) {
-  margin-right: 30px;
 }
 .home {
   width: 100vw;
   height: 100vh;
   background-color: #FFF;
 }
-.home-header {
-  font-size: 48px;
-  font-weight: 100;
-  font-style: italic;
-  letter-spacing: 1px;
-  text-align: center;
-}
-.home-sub-header {
-  margin-top: 30px;
-  font-size: 24px;
-  font-weight: 100;
-  font-style: italic;
-  letter-spacing: 1px;
-}
-.full-center {
+.home-center {
   max-width: 480px;
   height: 120px;
   position: absolute;
@@ -134,6 +118,20 @@ a,
   right: 0;
   margin: auto;
 }
+.home-center__header {
+  font-size: 48px;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.home-center__sub-header {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: 1px;
+}
 .arrow {
   position: absolute;
   bottom: 40px;
@@ -141,7 +139,7 @@ a,
   left: 50%;
   cursor: pointer;
 }
-.arrow-down {
+.arrow__svg {
   fill: #5a5a5a;
   padding-top: 10px;
   display: block;
@@ -152,14 +150,14 @@ a,
   -moz-animation: bounce 2s infinite;
   -o-animation: bounce 2s infinite;
 }
-.arrow a {
+.arrow__link {
   cursor: pointer;
   color: #5a5a5a;
 }
-.arrow a:hover {
+.arrow__link:hover {
   color: #000;
 }
-.arrow a:hover .arrow-down {
+.arrow__link:hover svg {
   fill: #000;
 }
 .project-section {
@@ -167,14 +165,14 @@ a,
   padding-top: 62px;
   text-align: center;
 }
-.project-section-header {
+.project-section__header {
   font-style: normal;
   padding: 10px 0;
   font-weight: 100;
   font-style: italic;
   letter-spacing: 1px;
 }
-.project-section-sub-header {
+.project-section__sub-header {
   font-weight: 100;
   font-style: italic;
   letter-spacing: 1px;
@@ -204,38 +202,37 @@ a,
   max-width: 266px;
   margin: 0 auto;
 }
-.social-icon {
+.social__icon {
   margin-right: 40px;
 }
-.social-icon:last-child {
+.social__icon:last-child {
   margin-right: 0;
 }
-.social-icon_twitter svg path:hover,
-.social-icon_twitter svg path:focus {
+.social__icon_twitter svg path:hover,
+.social__icon_twitter svg path:focus {
   fill: #55acee;
 }
-.social-icon_instagram:hover svg path,
-.social-icon_instagram:focus svg path {
+.social__icon_instagram:hover svg path,
+.social__icon_instagram:focus svg path {
   fill: #a77d63;
 }
-.social-icon_github:hover svg path,
-.social-icon_github:focus svg path {
+.social__icon_github:hover svg path,
+.social__icon_github:focus svg path {
   fill: #FFF;
 }
-.social-icon_medium:hover .shape-1,
-.social-icon_medium:focus .shape-1 {
+.social__icon_medium:hover .shape-1,
+.social__icon_medium:focus .shape-1 {
   fill: #2DFB82;
 }
-.social-icon_medium:hover .shape-2,
-.social-icon_medium:focus .shape-2 {
+.social__icon_medium:hover .shape-2,
+.social__icon_medium:focus .shape-2 {
   fill: #10DF65;
 }
-.social-icon_medium:hover .shape-3,
-.social-icon_medium:focus .shape-3 {
+.social__icon_medium:hover .shape-3,
+.social__icon_medium:focus .shape-3 {
   fill: #15C05C;
 }
-.social-icon_medium:hover .shape-4,
-.social-icon_medium:focus .shape-4 {
+.social__icon_medium:hover .shape-4,
+.social__icon_medium:focus .shape-4 {
   fill: #01A161;
 }
-/* //FOOTER */
