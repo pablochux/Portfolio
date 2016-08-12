@@ -42,24 +42,15 @@
 	&-center{
 		max-width: 480px;
 	    height: 120px;
-
-	    position: absolute;
-	    top:0;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
-
-	    margin: auto;
+	    .u-absolute-center;
 
 		&__header{
-			font-size: 48px;
-			.default-header;
-			.center;
+			font-size: 62px;
+			.u-center;
 		}
 		&__sub-header{
-			margin-top: 30px;
+			padding-top: 15px;
 			font-size: 24px;
-			.default-header;
 		}
 	}
 }
@@ -74,7 +65,7 @@
 		fill: #5a5a5a;
 		padding-top: 10px;
 		display: block;
-		.margin-center;
+		.u-margin-center;
 		width: 22px;
 		animation: bounce 2s infinite;
 		-webkit-animation: bounce 2s infinite;
@@ -100,38 +91,32 @@
 //------------------------------
 .project-section{
 	margin-bottom: 200px;
-	padding-top: 62px;
-	.center;
+	padding-top: 50px;
+	.u-center;
 
  	&__header{
 		font-style: normal;
 		padding: 10px 0;
-		.default-header;
-	}
-	&__sub-header{
-		.default-header;
 	}
 }
 .img-container{
 	padding-top: 50px;
 	width: 90%;
-	margin: 0 auto;
+	.u-margin-center;
 
 	&__img{
-		width: 100%;
 		box-shadow: 20px 20px 40px 0px rgba(0,0,0,0.50);
 	}
 }
 //------------------------------
 // Footer
 //------------------------------
-.footer{
-	padding: 100px 0;
+.c-footer{
+	padding: 70px 0;
 	background-color: @main-text-color;
 
 	&__header{
-		.center;
-		.default-header;
+		.u-center;
 		color: #b4b4b4;
 		margin-bottom: 25px;
 	}
@@ -139,7 +124,7 @@
 }
 .social{
 	max-width: 266px;
-	.margin-center;
+	.u-margin-center;
 
 	&__icon{
 		margin-right: 40px;

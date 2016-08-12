@@ -1,6 +1,25 @@
-.center {
+.u-center {
   text-align: center;
 }
-.margin-center {
+.u-margin-center {
   margin: 0 auto;
+}
+.u-clear-fix {
+  clear: both;
+}
+.u-absolute-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.u-full-width {
+  width: 100%;
+}
+.u-header {
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: 1px;
 }
