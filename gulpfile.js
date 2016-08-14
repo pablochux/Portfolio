@@ -1,14 +1,14 @@
 // Plugins
 var gulp = require('gulp'),
-    less = require('gulp-less'),
+    sass = require('gulp-sass'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     pump = require('pump'),
     htmlmin = require('gulp-htmlmin'),
-    // imagemin = require('gulp-imagemin'),
-    // autoprefixer = require('gulp-autoprefixer'),
-    // del = require('del'),
+    imagemin = require('gulp-imagemin'),
+    autoprefixer = require('gulp-autoprefixer'),
+    del = require('del'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
 
@@ -30,8 +30,8 @@ gulp.task('default', function(){
 		notify: false
 	});
 
-	gulp.watch(src + "less/*.less", ['less']);
-	gulp.watch(src + "less/*.less").on("change", reload);
+	gulp.watch(src + "scss/*.scss", ['sass']);
+	gulp.watch(src + "scss/*.scss").on("change", reload);
 	gulp.watch(src + "*.html").on("change", reload);
 	gulp.watch(src + "js/*.js").on("change", reload);
 });
@@ -43,21 +43,21 @@ gulp.task('minify-css', function(){
         .pipe(gulp.dest(minsrc + 'css'));
 });
 
-// Compile the less files
-gulp.task("less", function() {
-    gulp.src(src + "less/*.less")
-        .pipe(less())
+// Compile the sass files
+gulp.task("sass", function() {
+    gulp.src(src + "scss/*.scss")
+        .pipe(sass())
         .pipe(gulp.dest(src + 'css'));
 });
 // Autoprefix all the css
-// gulp.task('prefix', () =>
-//     gulp.src(minsrc + 'css/styles.css')
-//         .pipe(autoprefixer({
-//             browsers: ['last 10 versions'],
-//             cascade: false
-//         }))
-//         .pipe(gulp.dest(minsrc + 'css/'))
-// );
+gulp.task('prefix', () =>
+    gulp.src(minsrc + 'css/styles.css')
+        .pipe(autoprefixer({
+            browsers: ['last 10 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest(minsrc + 'css/'))
+);
 // Add bower componentes
 gulp.task('add-b', function() {
     return gulp.src('./bower.json')
@@ -87,25 +87,25 @@ gulp.task('minify-html', function() {
     .pipe(gulp.dest(minsrc))
 });
 // Compress images in src/img folder
-// gulp.task('compress-img', () =>
-// 	gulp.src(src + 'img/*')
-// 		.pipe(imagemin())
-// 		.pipe(gulp.dest(minsrc + 'img'))
-// );
+gulp.task('compress-img', () =>
+	gulp.src(src + 'img/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest(minsrc + 'img'))
+);
 
 // Finish proyect
 // Clean the finish proyect
-// gulp.task('c-d', function () {
-//   return del([
-//     minsrc + '*.html',
-//     minsrc + '/js/*.js',
-//     minsrc + '/css/*.css',
-//     minsrc + '/img/*'
-//   ]);
-// });
+gulp.task('c-d', function () {
+  return del([
+    minsrc + '*.html',
+    minsrc + '/js/*.js',
+    minsrc + '/css/*.css',
+    minsrc + '/img/*'
+  ]);
+});
 // Compile, minified and compress all into the dist foler
-// NOT WORKING!! fails on less task, not updated, ¡run twice!
-gulp.task('f', ['less', 'concat-js', 'minify-js', 'minify-css', 'minify-html', /*'compress-img'*/], function() {
+// NOT WORKING!! fails on sass task, not updated, ¡run twice!
+gulp.task('f', ['sass', 'concat-js', 'minify-js', 'minify-css', 'minify-html', 'compress-img'], function() {
 	console.log("Finished");
 });
 // Starts the server in the dist foler for testing
@@ -124,8 +124,8 @@ gulp.task('check-dist', function() {
                 }
 	});
 
-	gulp.watch(src + "less/*.less", ['less']);
-	gulp.watch(src + "less/*.less").on("change", reload);
+	gulp.watch(src + "scss/*.scss", ['sass']);
+	gulp.watch(src + "scss/*.scss").on("change", reload);
 	gulp.watch(src + "*.html").on("change", reload);
 	gulp.watch(src + "js/*.js").on("change", reload);
 });

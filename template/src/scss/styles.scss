@@ -16,7 +16,7 @@
 	padding: 20px 40px;
 	position: fixed;
 	width: 100%;
-	background-color: @main-bg-color;
+	background-color: $main-bg-color;
 
 	& .nav{
 		&_right{
@@ -37,7 +37,7 @@
 .home{
 	width: 100vw;
 	height: 100vh;
-	background-color: @main-bg-color;
+	background-color: $main-bg-color;
 
 	&-center{
 		max-width: 480px;
@@ -78,10 +78,10 @@
 		color: #5a5a5a;
 
 		&:hover{
-			color: @main-text-color;
+			color: $main-text-color;
 
 			& svg{
-				fill: @main-text-color;
+				fill: $main-text-color;
 			}
 		}
 	}
@@ -113,7 +113,7 @@
 //------------------------------
 .c-footer{
 	padding: 70px 0;
-	background-color: @main-text-color;
+	background-color: $main-text-color;
 
 	&__header{
 		.u-center;
@@ -136,19 +136,19 @@
 		&_twitter svg path{
 			&:hover,
 			&:focus{
-				fill: @twitter-color;
+				fill: $twitter-color;
 			}
 		}
 		&_instagram:hover,
 		&_instagram:focus{
 			& svg path{
-				fill: @instagram-color;
+				fill: $instagram-color;
 			}
 		}
 		&_github:hover,
 		&_github:focus{
 			& svg path{
-				fill: @main-bg-color;
+				fill: $main-bg-color;
 			}
 		}
 		&_medium{
@@ -156,16 +156,16 @@
 			&:focus{
 				.shape{
 					&-1{
-						fill: @medium-color-4;
+						fill: $medium-color-4;
 					}
 					&-2{
-						fill: @medium-color-3;
+						fill: $medium-color-3;
 					}
 					&-3{
-						fill: @medium-color-2;
+						fill: $medium-color-2;
 					}
 					&-4{
-						fill: @medium-color-1;
+						fill: $medium-color-1;
 					}
 				}
 			}
