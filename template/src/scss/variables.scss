@@ -4,27 +4,32 @@
 .u-center{
 	text-align: center;
 }
+
 .u-margin-center{
 	margin: 0 auto;
 }
+
 .u-clear-fix{
 	clear: both;
 }
+
 .u-absolute-center{
 	position: absolute;
 	top: 0;
+	right: 0;
 	bottom: 0;
 	left: 0;
-	right: 0;
 
 	margin: auto;
 }
+
 .u-full-width{
 	width: 100%;
 }
+
 .u-header{
-	font-weight: 100;
 	font-style: italic;
+	font-weight: 100;
 	letter-spacing: 1px;
 }
 //------------------------------
@@ -38,10 +43,10 @@ $medium-color-1: #01A161;
 $medium-color-2: #15C05C;
 $medium-color-3: #10DF65;
 $medium-color-4: #2DFB82;
-$twitter-color: #55acee;
-$instagram-color: #a77d63;
+$twitter-color: #55ACEE;
+$instagram-color: #A77D63;
 
 //------------------------------
 // URLS Variables
 //------------------------------
-$img: "../img";
+$img: '../img';

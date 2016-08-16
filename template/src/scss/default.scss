@@ -1,13 +1,15 @@
 @import 'variables';
+
 //------------------------------
 // Default styles
 //------------------------------
 body{
+	background-color: $main-bg-color;
 	font-family: Roboto;
-	background-color: @main-bg-color;
 }
+
 a{
-	font-weight: 100;
 	font-style: italic;
+	font-weight: 100;
 	letter-spacing: 1px;
 }
