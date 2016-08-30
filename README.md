@@ -2,5 +2,5 @@
 
 Portfolio FreeCodeCamp proyect.
 
-Site is up in https://pablochux.github.io/Portfolio/
+Site is up in https://pablochux.github.io/portfolio/
 
