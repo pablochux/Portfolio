@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     del = require('del'),
     jasmine = require('gulp-jasmine'),
+    bulkSass = require('gulp-sass-bulk-import'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
 
@@ -39,12 +40,23 @@ gulp.task('default', function() {
     gulp.watch(src + "js/**/*.js").on("change", reload);
 });
 
-// Compile the sass files into css files
-gulp.task("sass", function() {
-    gulp.src(src + "scss/styles.scss")
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(src + 'css/')); // output to theme root
+// Compile the sass files into css files and import folders with /*
+gulp.task('sass', function() {
+    return gulp
+        .src(src + 'scss/styles.scss')
+        .pipe(bulkSass())
+        .pipe(
+            sass({
+                includePaths: [src + 'scss/']
+            }).on('error', sass.logError))
+        .pipe(gulp.dest(src + 'css/'));
 });
+// Sass gulp task without * imports
+// gulp.task("sass", function() {
+//     gulp.src(src + "scss/styles.scss")
+//         .pipe(sass().on('error', sass.logError))
+//         .pipe(gulp.dest(src + 'css/')); // output to theme root
+// });
 // Minify css
 gulp.task('minify-css', function() {
     return gulp.src(src + 'css/styles.css')
@@ -197,3 +209,6 @@ gulp.task('test', function() {
         // gulp-jasmine works on filepaths so you can't have any plugins before it
         .pipe(jasmine());
 });
+
+
+// Test
