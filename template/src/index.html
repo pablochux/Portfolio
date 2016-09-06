@@ -9,13 +9,9 @@
 	</head>
 	<body>
 		<header class="header">
-			<nav class="nav">
+			<nav class="nav" id="header">
 				<a href="#home" data-scroll class="nav__link nav__link--left">Pablo Alonso</a>
-				<div id="nav-icon4">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+				<a href="javascript:void(0)" onclick="myFunction()" class="icon">&#9776;</a>
 				<ul class="nav_right_position">
 					<li class="nav__item"><a data-scroll href="#home" title="Home" class="nav__link">Home</a></li>
 					<li class="nav__item"><a data-scroll href="#projects" title="Projects" class="nav__link">Projects</a></li>
@@ -104,6 +100,14 @@
 		<!-- Smooth Scroll script -->
 		<script>
 		    smoothScroll.init();
+			function myFunction() {
+			    var x = document.getElementById("header");
+			    if (x.className === "nav") {
+			        x.className += " responsive";
+			    } else {
+			        x.className = "nav";
+			    }
+			}
 		</script>
 	</body>
 </html>

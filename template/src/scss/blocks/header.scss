@@ -9,53 +9,60 @@
 
 	background-color: $main-bg-color;
 
-	// Mobile
-	@media screen and (max-width: 500px){
-		padding: 0;
-	}
-
 	& .nav{
+
 		&_right_position{
 			float: right;
-
-			// Mobile
-			@media screen and (max-width: 500px){
-				float: none;
-			}
 		}
 
 		&__item{
-			display: block;
-			width: 100%;
-
-			border-bottom: 1px solid grey;
-
-			text-align: center;
-		}
-
-		&__item:not(:last-child){
 			margin-right: 30px;
-
-			// Mobile
-			@media screen and (max-width: 500px){
-				margin: 0;
-			}
 		}
 
+		&__item:nth-child(3){
+			margin-right: 0px;
+		}
 		&__link{
-			display: inline-block;
-			width: 100%;
-
 			color: #414141;
 			font-size: 18px;
-			// Mobile
-			@media screen and (max-width: 500px){
-				padding: 15px;
-			}
-
-			&--left{
-
-			}
 		}
 	}
+	& .icon {
+		display: none;
+
+		font-style: normal;
+	}
+}
+
+@media screen and (max-width:680px) {
+	.nav__item{
+		display: none;
+	}
+
+	.header .icon {
+		display: inline-block;
+		float: right;
+  }
+  .nav_right_position{
+	  width: 100%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .responsive {
+	  position: relative;
+  }
+  .responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .responsive li {
+    float: none;
+    display: inline;
+  }
+  .responsive li a {
+    display: block;
+    text-align: center;
+  }
 }
