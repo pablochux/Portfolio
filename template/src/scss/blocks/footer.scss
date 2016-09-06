@@ -1,0 +1,72 @@
+//------------------------------
+// Footer
+//------------------------------
+.c-footer{
+	padding: 70px 0;
+	background-color: $main-text-color;
+
+	&__header{
+		@extend .u-center;
+
+		margin-bottom: 25px;
+
+		color: #B4B4B4;
+	}
+
+}
+
+.social{
+	@extend .u-margin-center;
+	max-width: 266px;
+
+	&__icon{
+		margin-right: 40px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		// Modifiers
+		&_twitter_logo svg path{
+			&:hover,
+			&:focus{
+				fill: $twitter-color;
+			}
+		}
+
+		&_instagram_logo:hover,
+		&_instagram_logo:focus{
+			& svg path{
+				fill: $instagram-color;
+			}
+		}
+
+		&_github_logo:hover,
+		&_github_logo:focus{
+			& svg path{
+				fill: $main-bg-color;
+			}
+		}
+
+		&_medium_logo{
+			&:hover,
+			&:focus{
+				& .shape-1{
+					fill: $medium-color-4;
+				}
+
+				& .shape-2{
+					fill: $medium-color-3;
+				}
+
+				& .shape-3{
+					fill: $medium-color-2;
+				}
+
+				& .shape-4{
+					fill: $medium-color-1;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+//------------------------------
+// Home
+//------------------------------
+.home{
+	width: 100vw;
+	height: 100vh;
+
+	background-color: $main-bg-color;
+
+	&-center{
+		@extend .u-absolute-center;
+
+		max-width: 480px;
+	    height: 120px;
+
+		&__header{
+			@extend .u-center;
+
+			font-size: 62px;
+		}
+
+		&__sub-header{
+			padding-top: 15px;
+
+			font-size: 24px;
+		}
+	}
+}
+
+.arrow{
+	position: absolute;
+    bottom: 40px;
+	left: 50%;
+    margin-left: -44px;
+
+    cursor: pointer;
+
+	&__svg{
+		@extend .u-margin-center;
+		display: block;
+		width: 22px;
+		padding-top: 10px;
+		animation: bounce 2s infinite;
+		-webkit-animation: bounce 2s infinite;
+		-moz-animation: bounce 2s infinite;
+		-o-animation: bounce 2s infinite;
+
+		fill: #5A5A5A;
+	}
+
+	// It's down because it has to have more specifity
+	&__link{
+		color: #5A5A5A;
+		cursor: pointer;
+
+		&:hover{
+			color: $main-text-color;
+
+			& svg{
+				fill: $main-text-color;
+			}
+		}
+	}
+}

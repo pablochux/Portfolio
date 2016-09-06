@@ -1,0 +1,24 @@
+//------------------------------
+// Projects section
+//------------------------------
+.project-section{
+	@extend .u-center;
+	margin-bottom: 200px;
+	padding-top: 50px;
+
+ 	&__header{
+		padding: 10px 0;
+
+		font-style: normal;
+	}
+}
+
+.img-container{
+	@extend .u-margin-center;
+	width: 90%;
+	padding-top: 50px;
+
+	&__img{
+		box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.50);
+	}
+}
