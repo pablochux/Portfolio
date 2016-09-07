@@ -162,6 +162,28 @@ a {
   60% {
     transform: translateY(10px); } }
 
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@keyframes fadeOff {
+  0% {
+    display: block;
+    opacity: 1; }
+  99% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: none;
+    opacity: 0; } }
+
 .c-footer {
   padding: 70px 0;
   background-color: #000; }
@@ -193,41 +215,55 @@ a {
 .header {
   position: fixed;
   width: 100%;
-  height: 62px;
-  padding: 20px 40px;
-  background-color: #FFF; }
-  .header .nav_right_position {
-    float: right; }
-  .header .nav__item {
-    margin-right: 30px; }
-  .header .nav__item:nth-child(3) {
-    margin-right: 0px; }
-  .header .nav__link {
-    color: #414141;
-    font-size: 18px; }
+  background-color: #FFF;
+  z-index: 4; }
+  .header .nav {
+    padding: 20px 40px; }
+    .header .nav_right_position {
+      float: right; }
+    @media screen and (max-width: 680px) {
+      .header .nav__item {
+        padding: 5px 0; } }
+    @media screen and (min-width: 680px) {
+      .header .nav__item {
+        margin-right: 30px; } }
+    .header .nav__item:nth-child(3) {
+      margin-right: 0px; }
+    .header .nav__link {
+      color: #414141;
+      font-size: 18px; }
   .header .icon {
     display: none;
     font-style: normal; }
 
 @media screen and (max-width: 680px) {
+  .header .nav_right_position {
+    float: none; }
   .nav__item {
-    display: none; }
+    display: block; }
   .header .icon {
     display: inline-block;
     float: right; }
   .nav_right_position {
-    width: 100%; } }
+    display: none;
+    width: 100%;
+    animation: fadeOff 500ms ease-in-out; } }
 
 @media screen and (max-width: 680px) {
-  .responsive {
-    position: relative; }
+  .header .responsive {
+    position: relative;
+    padding: 20px 40px 0; }
   .responsive li.icon {
     position: absolute;
-    right: 0;
-    top: 0; }
+    top: 0;
+    right: 0; }
+  .responsive ul {
+    display: block;
+    padding: 5px 0;
+    animation: fadeInFromNone 500ms ease-in-out; }
   .responsive li {
-    float: none;
-    display: inline; }
+    margin: 0;
+    float: none; }
   .responsive li a {
     display: block;
     text-align: center; } }
@@ -235,7 +271,8 @@ a {
 .home {
   width: 100vw;
   height: 100vh;
-  background-color: #FFF; }
+  background-color: #FFF;
+  z-index: 1; }
   .home-center {
     max-width: 480px;
     height: 120px; }
@@ -250,7 +287,8 @@ a {
   bottom: 40px;
   left: 50%;
   margin-left: -44px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 1; }
   .arrow__svg {
     display: block;
     width: 22px;

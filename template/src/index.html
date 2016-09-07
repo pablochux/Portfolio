@@ -11,11 +11,11 @@
 		<header class="header">
 			<nav class="nav" id="header">
 				<a href="#home" data-scroll class="nav__link nav__link--left">Pablo Alonso</a>
-				<a href="javascript:void(0)" onclick="myFunction()" class="icon">&#9776;</a>
+				<a href="javascript:void(0)" onclick="toggleNavbar()" class="icon">&#9776;</a>
 				<ul class="nav_right_position">
-					<li class="nav__item"><a data-scroll href="#home" title="Home" class="nav__link">Home</a></li>
-					<li class="nav__item"><a data-scroll href="#projects" title="Projects" class="nav__link">Projects</a></li>
-					<li class="nav__item"><a data-scroll href="#footer" title="About" class="nav__link">About</a></li>
+					<li class="nav__item"><a data-scroll href="#home" title="Home" class="nav__link" onclick="removeResponsiveNav()">Home</a></li>
+					<li class="nav__item"><a data-scroll href="#projects" title="Projects" class="nav__link" onclick="removeResponsiveNav()">Projects</a></li>
+					<li class="nav__item"><a data-scroll href="#footer" title="About" class="nav__link" onclick="removeResponsiveNav()">About</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -100,13 +100,26 @@
 		<!-- Smooth Scroll script -->
 		<script>
 		    smoothScroll.init();
-			function myFunction() {
-			    var x = document.getElementById("header");
-			    if (x.className === "nav") {
-			        x.className += " responsive";
+			function toggleNavbar() {
+			    var nav = document.getElementById("header");
+			    if (nav.className === "nav") {
+			        nav.className += " responsive";
+					// Add animation to the li
+					// var navItems = document.getElementsByClassName('nav__item');
+					// for (var i = 0; i < navItems.length; i++) {
+					// 	navItems[i].classList.add('animate');
+					// }
 			    } else {
-			        x.className = "nav";
+			        nav.className = "nav";
+					// var navItems = document.getElementsByClassName('nav__item');
+					// for (var i = 0; i < navItems.length; i++) {
+					// 	navItems[i].classList.remove('animate');
+					// }
 			    }
+			}
+			function removeResponsiveNav(){
+				var nav = document.getElementById("header");
+				nav.className = "nav";
 			}
 		</script>
 	</body>

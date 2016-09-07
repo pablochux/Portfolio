@@ -7,6 +7,8 @@
 
 	background-color: $main-bg-color;
 
+	z-index: 1;
+
 	&-center{
 		@extend .u-absolute-center;
 
@@ -34,6 +36,8 @@
     margin-left: -44px;
 
     cursor: pointer;
+
+	z-index: 1;
 
 	&__svg{
 		@extend .u-margin-center;
