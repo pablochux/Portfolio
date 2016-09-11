@@ -2,7 +2,10 @@
 // Footer
 //------------------------------
 .c-footer{
+	position: relative;
+
 	padding: 70px 0;
+
 	background-color: $main-text-color;
 
 	&__header{
@@ -67,6 +70,29 @@
 					fill: $medium-color-1;
 				}
 			}
+		}
+	}
+}
+
+.arrow-down{
+	position: absolute;
+
+	right: 50%;
+    bottom: 20px;
+    margin-right: -23px;
+
+	@media screen and (min-width: 768px){
+		right: 60px;
+		bottom: 40px;
+
+		margin-right: 0;
+	}
+
+	&__icon{
+		height: 18px;
+
+		@media screen and (min-width: 768px){
+			height: 20px;
 		}
 	}
 }
