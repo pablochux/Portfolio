@@ -213,20 +213,20 @@ a {
     .social__icon_medium_logo:hover .shape-4, .social__icon_medium_logo:focus .shape-4 {
       fill: #01A161; }
 
-.arrow-down {
+.arrow-up {
   position: absolute;
   right: 50%;
   bottom: 20px;
   margin-right: -23px; }
   @media screen and (min-width: 768px) {
-    .arrow-down {
+    .arrow-up {
       right: 60px;
       bottom: 40px;
       margin-right: 0; } }
-  .arrow-down__icon {
+  .arrow-up__icon {
     height: 18px; }
     @media screen and (min-width: 768px) {
-      .arrow-down__icon {
+      .arrow-up__icon {
         height: 20px; } }
 
 .header {
