@@ -94,7 +94,8 @@ a {
     font-family: 'Source Sans Pro', sans-serif;    
     color: #fff;
   }
-.header{
+
+  .header{
   font-size: 80px; 
   text-align: left;
   font-weight: bold;
@@ -131,7 +132,6 @@ p{
     margin-left: 32px;
     margin-right: 32px;
     font-size: 40px; 
-
   }  
   p{
     font-size: 20px;
