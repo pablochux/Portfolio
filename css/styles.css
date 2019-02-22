@@ -91,18 +91,20 @@ a {
     margin-top: 160px;
     margin-left: 160px;
     max-width: 1320px;
-    height: 120px;
-    font-size: 80px; 
-    text-align: left;
-    font-weight: bold;
     font-family: 'Source Sans Pro', sans-serif;    
     color: #fff;
   }
+.header{
+  font-size: 80px; 
+  text-align: left;
+  font-weight: bold;
+}
 body{
   background-color: #000;
 }
 p{
   font-size: 48px;
+  text-align: left;
 }
 
 .iron{
@@ -120,7 +122,9 @@ p{
 .twitter{
   color: #55ACEE;
 }
-
+.header{
+  margin-bottom: 16px;
+}
 @media screen and (max-width: 768px) {
   .home {
     margin-top: 80px;
@@ -129,11 +133,9 @@ p{
     font-size: 40px; 
 
   }  
-  .header{
-    margin-bottom: 16px;
-  }
   p{
     font-size: 20px;
     font-weight: 300;
+    text-align: left;
   }
 }
