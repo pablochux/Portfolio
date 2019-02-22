@@ -110,7 +110,7 @@ a {
     .social__icon_medium_logo:hover .shape-4, .social__icon_medium_logo:focus .shape-4 {
       fill: #01A161; }
 
-.header {
+.home {
     margin-top: 160px;
     margin-left: 160px;
     max-width: 1320px;
@@ -124,7 +124,7 @@ a {
 body{
   background-color: #000;
 }
-i{
+p{
   font-size: 48px;
 }
 
@@ -145,15 +145,18 @@ i{
 }
 
 @media screen and (max-width: 768px) {
-  .header {
+  .home {
     margin-top: 80px;
     margin-left: 32px;
     margin-right: 32px;
     font-size: 40px; 
+
   }  
-  i{
-    font-size: 24px;
-    line-height: 32px;
+  .header{
+    margin-bottom: 16px;
   }
-  
+  p{
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
