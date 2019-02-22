@@ -110,9 +110,7 @@ a {
     .social__icon_medium_logo:hover .shape-4, .social__icon_medium_logo:focus .shape-4 {
       fill: #01A161; }
 
-.home {
-  z-index: 1; }
-  .header {
+.header {
     margin-top: 160px;
     margin-left: 160px;
     max-width: 1320px;
@@ -144,4 +142,17 @@ i{
 
 .twitter{
   color: #55ACEE;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    margin-top: 80px;
+    margin-left: 32px;
+    margin-right: 32px;
+    font-size: 48px; 
+  }  
+  i{
+    font-size: 24px;
+  }
+  
 }
