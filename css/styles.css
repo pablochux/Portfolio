@@ -87,29 +87,6 @@ a {
   font-weight: 200;
   letter-spacing: 1px; }
 
-    color: #B4B4B4; }
-
-.social {
-  max-width: 266px; }
-  .social__icon {
-    margin-right: 40px; }
-    .social__icon:last-child {
-      margin-right: 0; }
-    .social__icon_twitter_logo svg path:hover, .social__icon_twitter_logo svg path:focus {
-      fill: #55ACEE; }
-    .social__icon_instagram_logo:hover svg path, .social__icon_instagram_logo:focus svg path {
-      fill: #A77D63; }
-    .social__icon_github_logo:hover svg path, .social__icon_github_logo:focus svg path {
-      fill: #FFF; }
-    .social__icon_medium_logo:hover .shape-1, .social__icon_medium_logo:focus .shape-1 {
-      fill: #2DFB82; }
-    .social__icon_medium_logo:hover .shape-2, .social__icon_medium_logo:focus .shape-2 {
-      fill: #10DF65; }
-    .social__icon_medium_logo:hover .shape-3, .social__icon_medium_logo:focus .shape-3 {
-      fill: #15C05C; }
-    .social__icon_medium_logo:hover .shape-4, .social__icon_medium_logo:focus .shape-4 {
-      fill: #01A161; }
-
 .home {
     margin-top: 160px;
     margin-left: 160px;
