@@ -84,7 +84,6 @@ img {
 
 a {
   font-style: italic;
-  font-weight: 200;
   letter-spacing: 1px; }
 
 .home {
@@ -127,15 +126,15 @@ p{
   margin-bottom: 16px;
 }
 @media screen and (max-width: 768px) {
-  .home {
-    margin-top: 80px;
-    margin-left: 32px;
-    margin-right: 32px;
-    font-size: 40px; 
-  }  
-  p{
-    font-size: 20px;
-    font-weight: 300;
-    text-align: left;
-  }
+	.home {
+    	margin: 80px 32px;
+  	} 
+  	.header{
+    	font-size: 32px; 
+  	} 
+  	p{
+    	font-size: 20px;
+    	font-weight: 300;
+		text-align: left;
+  	}
 }
