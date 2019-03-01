@@ -14,7 +14,9 @@ body {
 	margin: 0;
 	font: 16px/1 sans-serif;
 	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased; }
+	-webkit-font-smoothing: antialiased; 
+	color: #fff; 
+	font-family: 'Source Sans Pro', sans-serif;  }
 
 h1,
 h2,
@@ -88,9 +90,7 @@ img {
 .home {
     margin-top: 160px;
 	margin-left: 160px;
-    max-width: 1320px;
-	font-family: 'Source Sans Pro', sans-serif;    
-	color: #fff; }
+    max-width: 1320px;}
 
 .header{
 	font-size: 80px; 
@@ -136,4 +136,30 @@ p{
 			font-weight: 300;
 		text-align: left;
 		}
+}
+
+/* Spotify */
+
+.spotify{
+	margin-top: 160px;
+	margin-left: 160px;
+}
+.spotify img{
+	border-radius: 6px;
+	width: 480px;
+	height: 480px;
+	margin: 24px;
+	transition: all 0.1s ease-in-out;	
+}
+.spotify img:hover{
+	transform: scale(1.02);
+}
+.spotify .images{
+	margin-top: 64px;
+}
+.spotify h1{
+	color: #fff;
+	font-size: 80px; 
+	text-align: left;
+	font-weight: bold;
 }
