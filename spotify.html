@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Portfolio Page</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>(function() {
+			$(document)
+				.on("mousemove", ".element", function(event) {
+					let halfW = this.clientWidth / 2;
+					let halfH = this.clientHeight / 2;
+		
+					let coorX = halfW - (event.pageX - this.offsetLeft);
+					let coorY = halfH - (event.pageY - this.offsetTop);
+		
+					let degX = coorY / halfH * 2 + "deg";
+					let degY = coorX / halfW * -2 + "deg";
+		
+					$(this).css("transform", function() {
+						return "perspective( 200px ) rotateX(" + degX + ") rotateY(" + degY + ")";
+					});
+				})
+				.on("mouseout", ".element", function() {
+					$(this).removeAttr("style");
+				});
+		})();
+		
+		 </script>
+	</head>
+	<body>
+		<section class="spotify">
+			<h1 class="header ">So, you listen to music on Spotify?</h1>
+			<p>I've curating my favorite music month to month for the last 2 years. Hope you like it!</p>
+			<div class="element">
+				<div class="image" style="background-image: url('img/january_2019.jpg');"></div>
+				<!-- <a href="https://open.spotify.com/user/pablochux11/playlist/3GtO0AQnVcrM3oLiWlqRkh?si=uIImTy2uS6yprXmweuJVeg"><img src="img/february_2019.jpg" alt=""></a>
+				<a href="https://open.spotify.com/user/pablochux11/playlist/7Fs9j1gc2pHp4nUtkJyJAa?si=qTT4DmHvT7S-SkN4UyLECQ"><img src="img/march_2019.jpg" alt=""></a> -->
+			</div>
+			<div class="element">
+				<div class="image" style="background-image: url('img/february_2019.jpg');"></div>
+				<!-- <a href="https://open.spotify.com/user/pablochux11/playlist/3GtO0AQnVcrM3oLiWlqRkh?si=uIImTy2uS6yprXmweuJVeg"><img src="img/february_2019.jpg" alt=""></a>
+				<a href="https://open.spotify.com/user/pablochux11/playlist/7Fs9j1gc2pHp4nUtkJyJAa?si=qTT4DmHvT7S-SkN4UyLECQ"><img src="img/march_2019.jpg" alt=""></a> -->
+			</div>
+			<div class="element">
+				<div class="image" style="background-image: url('img/march_2019.jpg');"></div>
+				<!-- <a href="https://open.spotify.com/user/pablochux11/playlist/3GtO0AQnVcrM3oLiWlqRkh?si=uIImTy2uS6yprXmweuJVeg"><img src="img/february_2019.jpg" alt=""></a>
+				<a href="https://open.spotify.com/user/pablochux11/playlist/7Fs9j1gc2pHp4nUtkJyJAa?si=qTT4DmHvT7S-SkN4UyLECQ"><img src="img/march_2019.jpg" alt=""></a> -->
+			</div>
+		</section>
+	</body>
+</html>
